@@ -13,6 +13,7 @@ public:
 	
 	ANBC_A();
 
+
 protected:
 
     virtual void BeginPlay() override;
@@ -21,13 +22,13 @@ protected:
 private:
 
 	// 루트 컴포넌트를 나타내는 Scene Component 포인터 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly,  Category = "NBC_A|Component") // 에디터에서 볼 수만 있고 수정 불가
+	UPROPERTY(VisibleAnywhere, Category = "NBC_A|Component") // 에디터에서 볼 수만 있고 수정 불가
 	USceneComponent* SceneRoot;
 	// Static Mesh Component 포인터
-	UPROPERTY(EditAnywhere, BlueprintReadWrite,  Category = "NBC_A|Component")// 에디터또는 블루프린터에서 수정 가능
+	UPROPERTY(EditAnywhere, Category = "NBC_A|Component")// 에디터또는 블루프린터에서 수정 가능
 	UStaticMeshComponent* StaticMeshComp;
     // 회전 속도를 나타내는 변수
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly,  Category = "NBC_A|Properties") // 회전속도, 클래스 기본값만 수정 가능
+	UPROPERTY(EditDefaultsOnly, Category = "NBC_A|Properties") // 회전속도, 클래스 기본값만 수정 가능
 	float RotationSpeed;
 	
 	// FTimerHandle 선언
